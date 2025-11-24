@@ -19,6 +19,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Nagi\FilamentAbyssTheme\FilamentAbyssThemePlugin;
+use Jeffgreco13\FilamentBreezy\BreezyCore;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -54,6 +55,10 @@ class AdminPanelProvider extends PanelProvider
                 DispatchServingFilamentEvent::class,
             ])
             ->plugin(FilamentAbyssThemePlugin::make())
+            ->plugins([
+                BreezyCore::make()
+            ])
+
             ->authMiddleware([
                 Authenticate::class,
             ]);

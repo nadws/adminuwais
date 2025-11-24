@@ -19,20 +19,21 @@ use App\Filament\Resources\Enums\NavigationGroups;
 class PlantandPriceResource extends Resource
 {
     protected static ?string $model = PlantsPricing::class;
+    protected static ?int $navigationSort = 1;
 
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedClipboardDocumentCheck;
 
     protected static string|UnitEnum|null $navigationGroup = NavigationGroups::Katalog;
 
-    protected static ?string $navigationLabel = 'Plans & Pricing';
+    protected static ?string $navigationLabel = 'Paket & Harga';
 
 
-    protected static ?string $recordTitleAttribute = 'PlansPricing';
+    protected static ?string $recordTitleAttribute = 'Paket & Harga';
 
     public static function getBreadcrumb(): string
     {
-        return 'Plans & Prices';
+        return 'Paket & Harga';
     }
     public static function form(Schema $schema): Schema
     {

@@ -18,6 +18,6 @@ class ListPlantandPrices extends ListRecords
     }
     public function getTitle(): string
     {
-        return 'Plans & pricing';
+        return 'Paket & Harga';
     }
 }

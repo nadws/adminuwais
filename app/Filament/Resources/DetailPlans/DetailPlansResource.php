@@ -19,8 +19,9 @@ use App\Filament\Resources\Enums\NavigationGroups;
 class DetailPlansResource extends Resource
 {
     protected static ?string $model = DetailPlans::class;
+    protected static ?int $navigationSort = 2;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedDocumentMagnifyingGlass;
     protected static string|UnitEnum|null $navigationGroup = NavigationGroups::Katalog;
 
     protected static ?string $recordTitleAttribute = 'Detail Plans dan Pricing';
